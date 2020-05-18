@@ -20,6 +20,6 @@ const styles = {
     bottom: "0",
     position: "fixed",
     width: "100%",
-    left: "10rem",
+    color: "#000000",
   },
 };

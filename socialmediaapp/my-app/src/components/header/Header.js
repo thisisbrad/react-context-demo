@@ -17,14 +17,14 @@ const styles = {
     position: "fixed",
     display: "flex",
     flextDirection: "row",
-    backgroundColor: "#0a2463",
+    backgroundColor: "#ccc",
     justifyContent: "space-between",
     width: "100%",
-    height: "4rem",
+    height: "5rem",
   },
   h1: {
     fontSize: "1.5rem",
-    color: "#ffffff",
+    color: "#000000",
     marginLeft: "1rem",
   },
 };

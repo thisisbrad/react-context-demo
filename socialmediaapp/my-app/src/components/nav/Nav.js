@@ -30,7 +30,7 @@ const styles = {
   container: {
     position: "fixed",
     width: "10rem",
-    backgroundColor: "#0a2463",
+    backgroundColor: "#ccc",
     top: "4rem",
     left: "0",
     bottom: "0",
@@ -45,6 +45,6 @@ const styles = {
   },
   a: {
     textDecoration: "none",
-    color: "#fff",
+    color: "#000000",
   },
 };

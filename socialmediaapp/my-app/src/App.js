@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import MyBtn from "./components/buttons/MyBtn";
+// import MyBtn from "./components/buttons/MyBtn";
 import Myform from "./components/myForm/Myform";
 import Nav from "./components/nav/Nav";
 // import RightNav from "./components/nav/RightNav";
 import FormPost from "./components/formPost/FormPost";
-import { FaEdit } from "../node_modules/react-icons/fa";
+// import { FaEdit } from "../node_modules/react-icons/fa";
 
 class App extends Component {
   //create state for binding
   state = {
+    myInput: "",
     postValue: "",
     postItem: [
       {
@@ -19,15 +20,17 @@ class App extends Component {
         alt: "Flying high",
         title: "John",
         description: "I am coming home",
-        newPost: "",
+        myPost: "",
       },
     ],
   };
 
-  //onChange value
-  //Method to takecare of the databinding
+  //onchange on the inputs
   getPost = (e) => {
-    //getting the input values
+    //Binding
+    this.setState({ myInput: e.target.value });
+
+    //getting the input values chnage this to get all the inputs
     this.setState({ postValue: e.target.value });
   };
 
@@ -35,17 +38,24 @@ class App extends Component {
   addPost = (e) => {
     //prevent Default
     e.preventDefault();
-    //adding post
+    console.log("I am working!!!");
+    //We are updating the state
+    //This the inform we want to add to the post
     this.setState({
       //name of the postItem array
-      postItem: [{ newPost: this.state.postValue }, ...this.state.postItem],
+      postItem: [{ myPost: this.state.postValue }, ...this.state.postItem],
     });
+    e.target.reset();
   };
 
-  //deletePost
+  //deletePost passing the i since we want to delete according to id
   deletePost = (i) => {
     //delete
     console.log("Delete Post!!!");
+    //use splice to remove the selected item
+    this.state.postItem.splice(i, 1);
+    //we update the state
+    this.setState({ postItem: [...this.state.postItem] });
   };
 
   //edit post
@@ -55,18 +65,16 @@ class App extends Component {
   };
 
   render() {
-    //map through the postItems
+    //map through the postItems. The i is for counting. el is for the element
     let items = this.state.postItem.map((el, i) => {
       return (
         <FormPost
           key={i}
-          title={el.title}
-          description={el.description}
+          value={el}
+          //adding both delete and edit buttons the post/article everytime it iterartes
+          //Passing the i which is the key/id
           deletePost={() => this.deletePost(i)}
           editPost={() => this.editPost(i)}
-          newPost={el.newPost}
-          avatar={el.avatar}
-          val={el}
         />
       );
     });
@@ -77,13 +85,13 @@ class App extends Component {
         <main style={styles.main}>
           {/* <MyBtn /> */}
           <Myform
+            addPost={this.addPost}
             getPost={this.getPost}
             myInput={this.state.myInput}
-            addPost={this.addPost}
           />
-          <FaEdit color="red" size="2rem" />
+          {/* <FaEdit color="red" size="2rem" /> */}
           {items}
-          <FormPost />
+          {/* <FormPost /> */}
         </main>
         {/* <RightNav /> */}
         <Footer footerText="copyright &copy; 2020 by john" />
@@ -96,13 +104,10 @@ export default App;
 
 const styles = {
   main: {
-    // display: "flex",
-    // flexDirection: "row",
-    border: "5px solid red",
-    // height: "100vh",
+    border: "5px solid #fff",
     justifyContent: "space-between",
     backgroundGround: "#ccc",
     marginLeft: "10rem",
-    marginRight: "10rem",
+    marginRight: "20rem",
   },
 };

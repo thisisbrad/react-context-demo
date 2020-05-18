@@ -9,11 +9,12 @@ export default MyBtn;
 const styles = {
   myBtn: {
     padding: ".7rem 3.5rem",
-    backgroundColor: "#ff0000",
+    backgroundColor: "#000000",
     color: "#fff",
     fontSize: "1rem",
     fontWeight: "bold",
     outline: "none",
     cursor: "pointer",
+    width: "100%",
   },
 };

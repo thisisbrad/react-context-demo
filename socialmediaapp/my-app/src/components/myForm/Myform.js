@@ -9,7 +9,7 @@ const Myform = (props) => {
       <input
         type="text"
         style={styles.input}
-        placeholder={props.placeholder}
+        placeholder="Your Post Title"
         title="postValue"
         value={props.postValue}
         onChange={props.getPost}
@@ -18,12 +18,12 @@ const Myform = (props) => {
       <input
         type="text"
         style={styles.input}
-        placeholder={props.placeholder}
+        placeholder="Your Description"
         description="postValue"
         value={props.postValue}
         onChange={props.getPost}
       />
-      <p>New Item: {props.newPost}</p>
+      <p>New Item: {props.myInput}</p>
       <MyBtn btnText="Add Post" />
     </form>
   );
@@ -35,10 +35,10 @@ const styles = {
   myForm: {
     backgroundColor: "#ccc",
     padding: "30px 40px",
-    width: "30.5rem",
+    width: "85%",
     maxWidth: "100%",
-    marginLeft: "10rem",
-    marginTop: "15%",
+    marginLeft: "3rem",
+    marginTop: "13%",
     boxSizing: "border-box",
   },
   input: {
