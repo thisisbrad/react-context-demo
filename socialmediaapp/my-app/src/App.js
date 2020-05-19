@@ -23,6 +23,16 @@ class App extends Component {
         myPost: "",
       },
     ],
+    itemAds: [
+      {
+        avatar: require("../src/image/person.jpg"),
+        alt: "person head",
+      },
+      {
+        avatar: require("../src/image/person.jpg"),
+        alt: "person head",
+      },
+    ],
   };
 
   //onchange on the inputs

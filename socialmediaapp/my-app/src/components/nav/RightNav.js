@@ -1,7 +1,11 @@
 import React from "react";
 
 const RightNav = () => {
-  return <nav style={styles.container}></nav>;
+  return (
+    <nav style={styles.container}>
+      <article style={styles.article}>{/*  */}</article>
+    </nav>
+  );
 };
 
 export default RightNav;
@@ -26,5 +30,12 @@ const styles = {
   a: {
     textDecoration: "none",
     color: "#fff",
+  },
+  article: {
+    backgroundColor: "red",
+    width: "60%",
+    marginLeft: "1rem",
+    marginRight: "2rem",
+    padding: "3rem 3rem 3rem 1rem",
   },
 };

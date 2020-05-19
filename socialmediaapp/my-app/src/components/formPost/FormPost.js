@@ -1,7 +1,7 @@
 import React from "react";
 import MyBtn from "../buttons/MyBtn";
-// import { FaEdit } from "../../../node_modules/react-icons/fa";
-// import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
+import { FaEdit } from "../../../node_modules/react-icons/fa";
+import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
 
 const FormPost = (props) => {
   return (
@@ -12,11 +12,12 @@ const FormPost = (props) => {
       <p>{props.value.description}</p>
       <p>{props.value.myPost}</p>
       <button style={styles.button} onClick={props.deletePost}>
+        <FaRegTrashAlt style={styles.deleteIcon} />
         Delete Post
       </button>
       {/* <FaRegTrashAlt color="red" size="1.5rem" />
       <MyBtn click={props.deletePost} btnText="Delete Post" /> */}
-      <MyBtn click={props.editPost} btnText="Edit Post" />
+      <MyBtn click={props.deletePost} btnText="Edit Post" />
     </article>
   );
 };
@@ -47,5 +48,8 @@ const styles = {
     fontWeight: "bold",
     outline: "none",
     cursor: "pointer",
+  },
+  deleteIcon: {
+    paddingRight: ".5rem",
   },
 };

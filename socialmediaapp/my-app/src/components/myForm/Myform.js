@@ -36,7 +36,7 @@ export default Myform;
 const styles = {
   myForm: {
     backgroundColor: "#bbcde5",
-    padding: "30px 40px",
+    padding: "30px 40px 30px 40px",
     width: "95%",
     maxWidth: "100%",
     marginLeft: "3rem",
@@ -45,7 +45,8 @@ const styles = {
   },
   input: {
     width: "100%",
-    padding: ".7rem",
+    padding: ".5rem",
+    paddingRight: "0",
     marginBottom: ".3rem",
     marginTop: ".3rem",
     outline: "none",
