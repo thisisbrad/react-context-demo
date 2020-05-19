@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-// import MyBtn from "./components/buttons/MyBtn";
+import MyBtn from "./components/buttons/MyBtn";
 import Myform from "./components/myForm/Myform";
 import Nav from "./components/nav/Nav";
 import RightNav from "./components/nav/RightNav";
