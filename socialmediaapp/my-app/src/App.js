@@ -18,8 +18,8 @@ class App extends Component {
       {
         avatar: require("../src/image/person.jpg"),
         alt: "person head",
-        title: "",
-        description: "",
+        title: "Video Call",
+        description: "Call my friend in the evening.",
         myPost: "",
       },
     ],

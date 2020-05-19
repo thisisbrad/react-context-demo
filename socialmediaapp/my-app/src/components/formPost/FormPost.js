@@ -1,6 +1,6 @@
 import React from "react";
 import MyBtn from "../buttons/MyBtn";
-import { FaEdit } from "../../../node_modules/react-icons/fa";
+// import { FaEdit } from "../../../node_modules/react-icons/fa";
 import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
 
 const FormPost = (props) => {

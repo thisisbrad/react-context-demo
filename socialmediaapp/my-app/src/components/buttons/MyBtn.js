@@ -14,6 +14,9 @@ export default MyBtn;
 
 const styles = {
   myBtn: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     padding: ".7rem 3.5rem",
     backgroundColor: "#1c5d99",
     color: "#fff",
