@@ -8,8 +8,9 @@ const Myform = (props) => {
       <label style={styles.label}>Title</label>
       <input
         type="text"
+        name="title"
         style={styles.input}
-        placeholder="Your Post Title"
+        placeholder="Post title"
         title="postValue"
         value={props.postValue}
         onChange={props.getPost}
@@ -17,8 +18,9 @@ const Myform = (props) => {
       <label style={styles.label}>Description</label>
       <input
         type="text"
+        name="description"
         style={styles.input}
-        placeholder="Your Description"
+        placeholder="Post description"
         description="postValue"
         value={props.postValue}
         onChange={props.getPost}
@@ -33,9 +35,9 @@ export default Myform;
 
 const styles = {
   myForm: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#bbcde5",
     padding: "30px 40px",
-    width: "85%",
+    width: "95%",
     maxWidth: "100%",
     marginLeft: "3rem",
     marginTop: "13%",

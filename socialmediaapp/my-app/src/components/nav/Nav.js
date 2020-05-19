@@ -30,8 +30,8 @@ const styles = {
   container: {
     position: "fixed",
     width: "10rem",
-    backgroundColor: "#ccc",
-    top: "4rem",
+    backgroundColor: "#1c5d99",
+    top: "5rem",
     left: "0",
     bottom: "0",
   },
@@ -45,6 +45,6 @@ const styles = {
   },
   a: {
     textDecoration: "none",
-    color: "#000000",
+    color: "#fff",
   },
 };

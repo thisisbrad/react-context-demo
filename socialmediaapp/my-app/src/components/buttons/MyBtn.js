@@ -9,7 +9,7 @@ export default MyBtn;
 const styles = {
   myBtn: {
     padding: ".7rem 3.5rem",
-    backgroundColor: "#000000",
+    backgroundColor: "#1c5d99",
     color: "#fff",
     fontSize: "1rem",
     fontWeight: "bold",

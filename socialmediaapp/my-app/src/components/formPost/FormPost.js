@@ -1,7 +1,7 @@
 import React from "react";
 import MyBtn from "../buttons/MyBtn";
-import { FaEdit } from "../../../node_modules/react-icons/fa";
-import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
+// import { FaEdit } from "../../../node_modules/react-icons/fa";
+// import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
 
 const FormPost = (props) => {
   return (
@@ -11,10 +11,11 @@ const FormPost = (props) => {
       <h4>{props.value.title}</h4>
       <p>{props.value.description}</p>
       <p>{props.value.myPost}</p>
-      <button onClick={props.deletePost}>Delete Post</button>
-      <FaRegTrashAlt color="red" size="1.5rem" />
-      <MyBtn click={props.deletePost} btnText="Delete Post" />
-      <FaEdit />
+      <button style={styles.button} onClick={props.deletePost}>
+        Delete Post
+      </button>
+      {/* <FaRegTrashAlt color="red" size="1.5rem" />
+      <MyBtn click={props.deletePost} btnText="Delete Post" /> */}
       <MyBtn click={props.editPost} btnText="Edit Post" />
     </article>
   );
@@ -24,15 +25,27 @@ export default FormPost;
 
 const styles = {
   article: {
-    border: ".2rem solid #0a2463",
-    backgroundColor: "#ccc",
+    border: ".1rem solid #0a2463",
+    backgroundColor: "#bbcde5",
     padding: "1rem",
-    width: "80%",
+    width: "85%",
     marginLeft: "3rem",
     marginTop: "1rem",
   },
 
   img: {
-    width: "20px",
+    borderRadius: "50%",
+    width: "50px",
+    height: "50px",
+  },
+  button: {
+    width: "100%",
+    padding: ".5rem 0",
+    backgroundColor: "#e63946",
+    color: "#fff",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    outline: "none",
+    cursor: "pointer",
   },
 };

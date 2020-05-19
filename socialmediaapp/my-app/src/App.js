@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 // import MyBtn from "./components/buttons/MyBtn";
 import Myform from "./components/myForm/Myform";
 import Nav from "./components/nav/Nav";
-// import RightNav from "./components/nav/RightNav";
+import RightNav from "./components/nav/RightNav";
 import FormPost from "./components/formPost/FormPost";
 // import { FaEdit } from "../node_modules/react-icons/fa";
 
@@ -16,10 +16,10 @@ class App extends Component {
     postValue: "",
     postItem: [
       {
-        avatar: require("../src/image/instagram.png"),
-        alt: "Flying high",
-        title: "John",
-        description: "I am coming home",
+        avatar: require("../src/image/person.jpg"),
+        alt: "person head",
+        title: "",
+        description: "",
         myPost: "",
       },
     ],
@@ -32,6 +32,8 @@ class App extends Component {
 
     //getting the input values chnage this to get all the inputs
     this.setState({ postValue: e.target.value });
+    // this.props.onChange({ [e.target.name]: e.target.value });
+    // this.setState({ [e.target.name]: e.target.value });
   };
 
   //addPost
@@ -80,7 +82,7 @@ class App extends Component {
     });
     return (
       <div style={styles.container}>
-        <Header pgTitle="John's App" />
+        <Header />
         <Nav />
         <main style={styles.main}>
           {/* <MyBtn /> */}
@@ -89,11 +91,9 @@ class App extends Component {
             getPost={this.getPost}
             myInput={this.state.myInput}
           />
-          {/* <FaEdit color="red" size="2rem" /> */}
           {items}
-          {/* <FormPost /> */}
         </main>
-        {/* <RightNav /> */}
+        <RightNav />
         <Footer footerText="copyright &copy; 2020 by john" />
       </div>
     );

@@ -12,7 +12,7 @@ export default Footer;
 
 const styles = {
   footer: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#222222",
     display: "flex",
     flexDirection: "row",
     fontSize: ".7rem",
@@ -20,6 +20,6 @@ const styles = {
     bottom: "0",
     position: "fixed",
     width: "100%",
-    color: "#000000",
+    color: "#fff",
   },
 };
