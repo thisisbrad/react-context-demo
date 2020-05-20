@@ -12,8 +12,8 @@ import FormPost from "./components/formPost/FormPost";
 class App extends Component {
   //create state for binding
   state = {
-    myInput: "",
-    postValue: "",
+    // myInput: "",
+    // postTitle: "",
     postItem: [
       {
         avatar: require("../src/image/person.jpg"),
@@ -36,12 +36,13 @@ class App extends Component {
   };
 
   //onchange on the inputs
+  //Try to make this more dynamic by adding the name attribute
   getPost = (e) => {
-    //Binding
-    this.setState({ myInput: e.target.value });
+    //Binding - You are getting the value from the form input
+    this.setState({ postTitle: e.target.value });
 
     //getting the input values chnage this to get all the inputs
-    this.setState({ postValue: e.target.value });
+    this.setState({ postDescription: e.target.value });
     // this.props.onChange({ [e.target.name]: e.target.value });
     // this.setState({ [e.target.name]: e.target.value });
   };
@@ -51,11 +52,13 @@ class App extends Component {
     //prevent Default
     e.preventDefault();
     console.log("I am working!!!");
+    //Add validation here for the inputs.  
+    // if....doesnt = "" or empty array.
     //We are updating the state
     //This the inform we want to add to the post
     this.setState({
-      //name of the postItem array
-      postItem: [{ myPost: this.state.postValue }, ...this.state.postItem],
+      //name of the postItem array . Fix this for week 3
+      postItem: [{ myPost: this.state.postTitle }, { myPost: this.state.postDescription }, ...this.state.postItem],
     });
     e.target.reset();
   };
@@ -99,7 +102,6 @@ class App extends Component {
           <Myform
             addPost={this.addPost}
             getPost={this.getPost}
-            myInput={this.state.myInput}
           />
           {items}
         </main>

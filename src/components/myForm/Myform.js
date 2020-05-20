@@ -11,8 +11,8 @@ const Myform = (props) => {
         name="title"
         style={styles.input}
         placeholder="Post title"
-        title="postValue"
-        value={props.postValue}
+        title="postTitle"
+        value={props.postTitle}
         onChange={props.getPost}
       />
       <label style={styles.label}>Description</label>
@@ -21,8 +21,8 @@ const Myform = (props) => {
         name="description"
         style={styles.input}
         placeholder="Post description"
-        description="postValue"
-        value={props.postValue}
+        description="postDescription"
+        value={props.postDescription}
         onChange={props.getPost}
       />
       <p>New Item: {props.myInput}</p>
