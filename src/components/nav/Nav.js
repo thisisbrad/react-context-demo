@@ -1,50 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav style={styles.container}>
-      <ul style={styles.ul}>
-        <li style={styles.li}>
-          <a style={styles.a} href="News Feed">
-            News Feed
-          </a>
-        </li>
-        <li style={styles.li}>
-          <a style={styles.a} href="Messages">
-            Messages
-          </a>
-        </li>
-        <li style={styles.li}>
-          <a style={styles.a} href="Watch">
-            Watch
-          </a>
-        </li>
-      </ul>
+    <nav>
+      <NavLink to="/Newsfeed">Newsfeed</NavLink>
+      <NavLink to="/Messages">Messages</NavLink>
+      <NavLink to="/Watch">Watch</NavLink>
+      <NavLink to="/Profile">Profile</NavLink>
     </nav>
   );
 };
 
 export default Nav;
-
-const styles = {
-  container: {
-    position: "fixed",
-    width: "10rem",
-    backgroundColor: "#1c5d99",
-    top: "5rem",
-    left: "0",
-    bottom: "0",
-  },
-  ul: {
-    listStyle: "none",
-    padding: "0",
-    margin: "2rem",
-  },
-  li: {
-    marginBottom: "1rem",
-  },
-  a: {
-    textDecoration: "none",
-    color: "#fff",
-  },
-};
