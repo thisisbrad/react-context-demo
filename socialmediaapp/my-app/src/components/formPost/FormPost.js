@@ -17,7 +17,7 @@ const FormPost = (props) => {
       </button>
       {/* <FaRegTrashAlt color="red" size="1.5rem" />
       <MyBtn click={props.deletePost} btnText="Delete Post" /> */}
-      <MyBtn click={props.deletePost} btnText="Edit Post" />
+      <MyBtn primary={true} onClick={props.EditPost} btnText="Edit Post" />
     </article>
   );
 };

@@ -1,9 +1,12 @@
 import React from "react";
 
-const RightNav = () => {
+const RightNav = (props) => {
   return (
     <nav style={styles.container}>
-      <article style={styles.article}>{/*  */}</article>
+      {/* <h4>{props.value.title}</h4> */}
+      <article style={styles.article} key={props.id}>
+        <img style={styles.img} src={props.addOne} alt={props.alt} />
+      </article>
     </nav>
   );
 };
@@ -32,7 +35,7 @@ const styles = {
     color: "#fff",
   },
   article: {
-    backgroundColor: "red",
+    // backgroundColor: "red",
     width: "60%",
     marginLeft: "1rem",
     marginRight: "2rem",

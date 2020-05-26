@@ -25,11 +25,13 @@ class App extends Component {
     ],
     itemAds: [
       {
-        avatar: require("../src/image/person.jpg"),
+        title: "New Camera",
+        addOne: require("../src/image/camera1.jpg"),
         alt: "person head",
       },
       {
-        avatar: require("../src/image/person.jpg"),
+        title: "Camera Two",
+        addTwo: require("../src/image/camera.jpg"),
         alt: "person head",
       },
     ],
@@ -78,6 +80,9 @@ class App extends Component {
 
   render() {
     //map through the postItems. The i is for counting. el is for the element
+    let newAdd = this.state.itemAds.map((element, i) => {
+      return <RightNav key={i} value={element} />;
+    });
     let items = this.state.postItem.map((el, i) => {
       return (
         <FormPost
@@ -103,6 +108,7 @@ class App extends Component {
           />
           {items}
         </main>
+        {newAdd}
         <RightNav />
         <Footer footerText="copyright &copy; 2020 by john" />
       </div>
