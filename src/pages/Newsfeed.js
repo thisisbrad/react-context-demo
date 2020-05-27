@@ -87,9 +87,9 @@ class App extends Component {
 
   render() {
     //map through the postItems. The i is for counting. el is for the element
-    let newAdd = this.state.itemAds.map((element, i) => {
-      return <RightNav key={i} value={element} />;
-    });
+    // let newAdd = this.state.itemAds.map((element, i) => {
+    //   return <RightNav key={i} value={element} />;
+    // });
     let items = this.state.postItem.map((el, i) => {
       return (
         <FormPost
@@ -111,7 +111,7 @@ class App extends Component {
           <Myform addPost={this.addPost} getPost={this.getPost} />
           {items}
         </main>
-        {newAdd}
+        {/* {newAdd} */}
         <RightNav />
         <Footer footerText="copyright &copy; 2020 by john" />
       </div>

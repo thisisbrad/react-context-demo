@@ -2,6 +2,16 @@ body {
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70vh;
+  background-color: rgb(73, 79, 82);
+  color: #fff;
+}
+
+
 /* Colors */
 /* E63946 */
 /* bbcde5 */
