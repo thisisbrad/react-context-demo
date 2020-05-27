@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-// import "./App.css";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-// import MyBtn from "./components/buttons/MyBtn";
 import Myform from "../components/myForm/Myform";
 import Nav from "../components/nav/Nav";
 import RightNav from "../components/nav/RightNav";
 import FormPost from "../components/formPost/FormPost";
-// import { FaEdit } from "../node_modules/react-icons/fa";
 
 class App extends Component {
   //create state for binding

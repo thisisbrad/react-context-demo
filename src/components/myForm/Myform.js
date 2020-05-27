@@ -36,10 +36,10 @@ export default Myform;
 const styles = {
   myForm: {
     backgroundColor: "#bbcde5",
-    padding: "30px 40px 30px 40px",
+    padding: "30px 40px",
     width: "95%",
     maxWidth: "100%",
-    marginLeft: "3rem",
+    marginLeft: "70px",
     marginTop: "13%",
     boxSizing: "border-box",
   },

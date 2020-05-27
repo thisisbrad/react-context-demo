@@ -1,6 +1,5 @@
 import React from "react";
 import MyBtn from "../buttons/MyBtn";
-// import { FaEdit } from "../../../node_modules/react-icons/fa";
 import { FaRegTrashAlt } from "../../../node_modules/react-icons/fa";
 
 const FormPost = (props) => {
@@ -29,8 +28,8 @@ const styles = {
     border: ".1rem solid #0a2463",
     backgroundColor: "#bbcde5",
     padding: "1rem",
-    width: "85%",
-    marginLeft: "3rem",
+    width: "90%",
+    marginLeft: "5rem",
     marginTop: "1rem",
   },
 
