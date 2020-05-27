@@ -35,5 +35,6 @@ const styles = {
 
 const h1 = {
   textAlign: "center",
-  color: "#000",
+  color: "#1c5d99",
+  marginTop: "7rem",
 };

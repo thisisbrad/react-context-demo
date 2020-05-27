@@ -1,29 +1,39 @@
-import React, { useState, useEffect } from "react";
-// import React, { Component } from "react";
+import React, { Component } from "react";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import Nav from "../components/nav/Nav";
+import RightNav from "../components/nav/RightNav";
 
-const Profile = () => {
-  useEffect(() => {
-    fetchItems();
-  }, []);
-
-  //create state to add items in
-  const [items, setItems] = useState([]);
-
-  const fetchItems = async () => {
-    const data = await fetch("https://randomuser.me/api/?gender=female");
-
-    //convert to json
-    const items = await data.json();
-    console.log(items.results);
-    setItems(items.results);
-  };
-  return (
-    <div className="App">
-      {items.map((item) => (
-        <h1 key={item.resultsId}>{item.phone}</h1>
-      ))}
-    </div>
-  );
-};
+class Profile extends Component {
+  render() {
+    return (
+      <div style={styles.container}>
+        <Header />
+        <Nav />
+        <main style={styles.main}>
+          <h1 style={h1}>Your Profile</h1>
+        </main>
+        <RightNav />
+        <Footer footerText="copyright &copy; 2020 by john" />
+      </div>
+    );
+  }
+}
 
 export default Profile;
+
+const styles = {
+  main: {
+    border: "5px solid #fff",
+    justifyContent: "space-between",
+    backgroundGround: "#ccc",
+    marginLeft: "10rem",
+    marginRight: "20rem",
+  },
+};
+
+const h1 = {
+  textAlign: "center",
+  color: "#1c5d99",
+  marginTop: "7rem",
+};
