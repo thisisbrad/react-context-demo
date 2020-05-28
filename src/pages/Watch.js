@@ -20,9 +20,7 @@ function Watch() {
       <Nav />
       <main style={styles.main}>
         <h1 style={h1}>Your Favorite Watch</h1>
-        <Youtube>video = "fjfjhvfvh" opts{opts}</Youtube>
-        <Youtube>video opts{opts}</Youtube>
-        <Youtube>video opts{opts}</Youtube>
+        <Youtube videoId="GtHiv9obO9w" opts={opts} />
       </main>
       <RightNav />
       <Footer footerText="copyright &copy; 2020 by john" />

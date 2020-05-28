@@ -3,9 +3,8 @@ import React, { useState } from "react";
 //create content
 export const VideoContext = React.createContext("Video");
 
-//create provider
-const Store = ({ props }) => {
-  const [video, setVideo] = useState([
+const state = {
+  videoList: [
     {
       videoId: "GtHiv9obO9w",
     },
@@ -15,7 +14,12 @@ const Store = ({ props }) => {
     {
       videoId: "CWWOW7T82Hw",
     },
-  ]);
+  ],
+};
+
+//create provider
+const Store = ({ props }) => {
+  const [video, setVideo] = useState("Video");
 
   //return
   return (
