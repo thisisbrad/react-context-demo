@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 //create content
-export const VideoContext = React.createContext("Video");
+export const VideoContext = React.createContext("video");
 
 const state = {
   videoList: [
@@ -19,7 +19,7 @@ const state = {
 
 //create provider
 const Store = ({ props }) => {
-  const [video, setVideo] = useState("Video");
+  const [video, setVideo] = useState("video");
 
   //return
   return (

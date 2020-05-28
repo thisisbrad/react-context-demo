@@ -21,6 +21,7 @@ function Watch() {
       <main style={styles.main}>
         <h1 style={h1}>Your Favorite Watch</h1>
         <Youtube videoId="GtHiv9obO9w" opts={opts} />
+        <Video />
       </main>
       <RightNav />
       <Footer footerText="copyright &copy; 2020 by john" />
@@ -37,6 +38,7 @@ const styles = {
     backgroundGround: "#ccc",
     marginLeft: "10rem",
     marginRight: "20rem",
+    marginTop: "13rem",
   },
 };
 
