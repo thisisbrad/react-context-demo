@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./components/routes/Routes";
+import { BrowserRouter as Router } from "react-router-dom";
+import Store from "./components/store/Store";
 
 class App extends Component {
   //create state for binding
   render() {
     return (
-      <Router>
-        <Routes />
-      </Router>
+      <Store>
+        <Router>
+          <Routes />
+        </Router>
+      </Store>
     );
   }
 }

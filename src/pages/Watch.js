@@ -1,24 +1,33 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Nav from "../components/nav/Nav";
 import RightNav from "../components/nav/RightNav";
+//import youtube
+import Youtube from "react-youtube";
+//import video
+import Video from "../components/video/Video";
 
-class Watch extends Component {
-  render() {
-    return (
-      <div style={styles.container}>
-        <Header />
-        <Nav />
-        <main style={styles.main}>
-          <h1 style={h1}>Your Favorite Watch</h1>
-        </main>
-        {/* {newAdd} */}
-        <RightNav />
-        <Footer footerText="copyright &copy; 2020 by john" />
-      </div>
-    );
-  }
+function Watch() {
+  //Add state
+  const opts = {
+    height: "390",
+    width: "940",
+  };
+  return (
+    <div style={styles.container}>
+      <Header />
+      <Nav />
+      <main style={styles.main}>
+        <h1 style={h1}>Your Favorite Watch</h1>
+        <Youtube>video = "fjfjhvfvh" opts{opts}</Youtube>
+        <Youtube>video opts{opts}</Youtube>
+        <Youtube>video opts{opts}</Youtube>
+      </main>
+      <RightNav />
+      <Footer footerText="copyright &copy; 2020 by john" />
+    </div>
+  );
 }
 
 export default Watch;
