@@ -21,6 +21,8 @@ function Watch() {
       <main style={styles.main}>
         <h1 style={h1}>Your Favorite Watch</h1>
         <Youtube videoId="GtHiv9obO9w" opts={opts} />
+        <Youtube videoId="GtHiv9obO9w" opts={opts} />
+        <Youtube videoId="GtHiv9obO9w" opts={opts} />
         <Video />
       </main>
       <RightNav />
